@@ -1,0 +1,219 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+        <meta charset="UTF-8">
+        <title>Tokyo Dreams</title>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'main/css/style.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   </head>
+   <body>
+      <header class="header-top"></header>
+      <nav class="navbar-top">
+          <div style="position: absolute; margin-top: 20px; margin-left: 40px;">
+            <div class="popup container justify-content-center">
+                <div class="row">
+                    <img src="{% static 'main/img/uk.flag_.png' %}" style="width: 50px;" alt="en" data-google-lang="en">
+                    <img src="{% static 'main/img/1010336-Russia-Flag-Russian-Russian-Flag-Flag-Of-Russia.jpg' %}" style="width: 50px;" alt="ru" data-google-lang="ru">
+                    <img src="{% static 'main/img/Флаг_Германии.jpg' %}" style="width: 50px;" alt="de" data-google-lang="de">
+                </div>
+            </div>
+        </div>
+        <div class="nav-btns">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <a class=" nav-link nav-text" href="/inventory">CURRENT INVENTORY</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-text nav-link" href="/about">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-text nav-link" href="/specials">SPECIALS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-text nav-link " href="services">SERVICES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-text nav-link " href="rent">HOW TO RENT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-text nav-link " href="news">NEWS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-text nav-link " href="locations">LOCATIONS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-text nav-link " href="contact">CONTACT US</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-text nav-link " href="sales">SALES</a>
+                  </li>
+              </ul>
+        </div>
+        <div class="nav-contacts">
+          <img src="{% static 'main/img/Instagram-logo.png' %}" class="nav-contacts-img">
+          <img src="{% static 'main/img/Telegram-logo.png' %}" class="nav-contacts-img">
+          <img src="{% static 'main/img/3-34288_logo-facebook-png-facebook-new-png-logo.png' %}" class="nav-contacts-img" style="width: 35px; margin-left: 10px;">
+        </div>
+      </nav>
+
+      <main class="main-content">
+          {% block main %}
+          {% endblock %}
+      </main>
+
+
+      <footer class="main-footer">
+        <div class="footer-info">
+            <h3 class="footer-text" style="color: red; font-size: 40px;">WHY CHOOSE TOKYO DREAMS?</h3>
+
+            <h6 class="footer-text">Best Car Selection</h6>
+            <p class="footer-text">When looking for a new vehicle, we only pick out what meets our CAG guidelines of luxury and exhilaration; the kind of vehicles that make people stop and stare. Our vehicles are in perfect condition and well maintained. Don’t settle for anything less! No matter the occasion, we guarantee you will find something to your liking in our collection of luxury and exotic car rentals.</p>
+        
+            <h6 class="footer-text">Best Service</h6>
+            <p class="footer-text">We provide first class service to all of our customers. Whether it be renting one of our vehicles or assistance with planning your next special event, you can expect nothing but professionalism, honesty and respect. You deserve the best, and that’s what we deliver.</p>
+
+            <h6 class="footer-text">Reliability</h6>
+            <p class="footer-text">We are the most trusted source for exotic car rentals and specialized services with the best reputation in the entire state of Texas and surrounding areas. We have vowed to not engage in the sub-standard business practices of some other companies, such as  not actually having the vehicles displayed on their websites. All of our cars are on premise and the pictures you see are 100% REAL. What you see is what you get at CAG! </p>
+        </div>
+
+
+
+        <!--<div class="footer-form">
+            <h3 class="footer-input-text">SUBSCRIBE</h3>
+            <p class="footer-input-text" style="font-size: 14px; color: #a8a8a8;">Get the latest updates on CAG cars, events, coupons and more!</p>
+            <form id="form">
+                    <input type="text" placeholder="First Name" id="user_name" class="footer-input">
+                    <input type="text" placeholder="Last Name" id="user_town" class="footer-input">
+                    <input type="text" placeholder="Email Address" id="user_num" class="footer-input">
+                <div id="error"></div>
+                <button id="order" class="btn btn-outline-dark">SIGN UP</button>
+            </form>
+            <p class="footer-input-text" style="font-size: 10px; color: #a8a8a8;">We respect your privacy.</p>
+        </div>
+
+        <div class="footer-contacts">
+          <p class="footer-contacts-text footer-text">TERMS OF USE</p>
+          <p class="footer-contacts-text footer-text">PRIVACY POLICY</p>
+        </div>-->
+        <div class="footer-contact" style="margin-top: 20px;">
+            <img src="{% static 'main/img/Instagram-logo.png' %}" class="nav-contacts-img">
+            <img src="{% static 'main/img/Telegram-logo.png' %}" class="nav-contacts-img">
+            <img src="{% static 'main/img/3-34288_logo-facebook-png-facebook-new-png-logo.png' %}" class="nav-contacts-img" style="width: 35px; margin-left: 10px;">
+        </div>
+        
+      </footer>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="text/javascript">
+
+
+const googleTranslateConfig = {
+    /* Original language */
+    lang: "en",
+    /* The language we translate into on the first visit*/
+    /* Язык, на который переводим при первом посещении */
+    // langFirstVisit: 'ru',
+    /* Если скрипт не работает на поддомене,
+    раскомментируйте и
+    укажите основной домен в свойстве domain */
+    /* domain: "Get-Web.Site" */
+};
+
+function TranslateInit() {
+
+    if (googleTranslateConfig.langFirstVisit && !Cookies.get('googtrans')) {
+        // Если установлен язык перевода для первого посещения и куки не назначены
+        TranslateCookieHandler("/auto/" + googleTranslateConfig.langFirstVisit);
+    }
+
+    let code = TranslateGetCode();
+    // Находим флаг с выбранным языком для перевода и добавляем к нему активный класс
+    if (document.querySelector('[data-google-lang="' + code + '"]') !== null) {
+        document.querySelector('[data-google-lang="' + code + '"]').classList.add('language__img_active');
+    }
+
+    if (code == googleTranslateConfig.lang) {
+        // Если язык по умолчанию, совпадает с языком на который переводим
+        // То очищаем куки
+        TranslateCookieHandler(null, googleTranslateConfig.domain);
+    }
+
+    // Инициализируем виджет с языком по умолчанию
+    new google.translate.TranslateElement({
+        pageLanguage: googleTranslateConfig.lang,
+    });
+
+    // Вешаем событие  клик на флаги
+    TranslateEventHandler('click', '[data-google-lang]', function (e) {
+        TranslateCookieHandler("/" + googleTranslateConfig.lang + "/" + e.getAttribute("data-google-lang"), googleTranslateConfig.domain);
+        // Перезагружаем страницу
+        window.location.reload();
+    });
+}
+
+function TranslateGetCode() {
+    // Если куки нет, то передаем дефолтный язык
+    let lang = (Cookies.get('googtrans') != undefined && Cookies.get('googtrans') != "null") ? Cookies.get('googtrans') : googleTranslateConfig.lang;
+    return lang.match(/(?!^\/)[^\/]*$/gm)[0];
+}
+
+function TranslateCookieHandler(val, domain) {
+    // Записываем куки /язык_который_переводим/язык_на_который_переводим
+    Cookies.set('googtrans', val);
+    Cookies.set("googtrans", val, {
+        domain: "." + document.domain,
+    });
+
+    if (domain == "undefined") return;
+    // записываем куки для домена, если он назначен в конфиге
+    Cookies.set("googtrans", val, {
+        domain: domain,
+    });
+
+    Cookies.set("googtrans", val, {
+        domain: "." + domain,
+    });
+}
+
+function TranslateEventHandler(event, selector, handler) {
+    document.addEventListener(event, function (e) {
+        let el = e.target.closest(selector);
+        if (el) handler(el);
+    });
+}
+                var delay_popup = 1000;
+                setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
+
+$(document).ready(function() {
+  // Check if element is scrolled into view
+  function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return elemBottom <= docViewBottom && elemTop >= docViewTop;
+  }
+  // If element is scrolled into view, fade it in
+  $(window).scroll(function() {
+    $(".scroll-animations .animated").each(function() {
+      if (isScrolledIntoView(this) === true) {
+        $(this).addClass("fadeInLeft");
+      }
+    });
+  });
+        </script>
+      <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+      <script src="/js/google-translate.js"></script>
+      <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   </body>
+</html>

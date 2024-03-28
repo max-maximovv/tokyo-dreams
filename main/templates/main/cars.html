@@ -1,0 +1,68 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block main %}
+<div class="about-car">
+            <div id="carouselExampleIndicators" class="carousel slide" style="width: 800px; ">
+              <div class="carousel-indicators" style="margin-top: 20px;">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="width: 200px;"><img src="{{ inventory.img_1.url }}" class="d-block w-100" alt="..."></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" style="width: 200px;"><img src="{{ inventory.img_2.url }}" class="d-block w-100" alt="..."></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" style="width: 200px;"><img src="{{ inventory.img_3.url }}" class="d-block w-100" alt="..."></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4" style="width: 200px;"><img src="{{ inventory.img_4.url }}" class="d-block w-100" alt="..."></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5" style="width: 200px;"><img src="{{ inventory.img_5.url }}" class="d-block w-100" alt="..."></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6" style="width: 200px;"><img src="{{ inventory.img_6.url }}" class="d-block w-100" alt="..."></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7" style="width: 200px;"><img src="{{ inventory.img_7.url }}" class="d-block w-100" alt="..."></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8" style="width: 200px;"><img src="{{ inventory.img_8.url }}" class="d-block w-100" alt="..."></button>
+              </div>
+              <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ inventory.img_1.url }}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ inventory.img_2.url }}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ inventory.img_3.url }}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ inventory.img_4.url }}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ inventory.img_5.url }}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ inventory.img_6.url }}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ inventory.img_7.url }}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ inventory.img_8.url }}" class="d-block w-100" alt="...">
+                    </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div class="about-car-text">
+                <h1 style="text-align: center; font-family: Abel; color: red; font-size: 60px; margin-top: 5%;">Rent an {{ inventory.name }}</h1>
+                <h4 style="font-family: Abel; color: #fff; font-size: 20px;">{{ inventory.rent }}</h4>
+                <h4 style="font-family: Abel; color: #fff; font-size: 20px;">MSRP - {{ inventory.MSRP }}</h4>
+                <p><pre style="font-family: Abel; color: #fff; font-size: 20px;">{{ inventory.specs }}</pre></p>
+
+                <h4 style="font-family: Abel; color: #fff; font-size: 20px;">Daily rent - {{ inventory.rent }}</h4>
+                <h4 style="font-family: Abel; color: #fff; font-size: 20px;">Purchase - {{ inventory.Purchase }}</h4>
+
+                <p style="font-family: Abel; color: #fff; font-size: 20px;">{{ inventory.text }}</p>
+            </div>
+
+</div>
+    <button type="button" class="btn btn-outline-danger" style="margin-top: 15%; margin-left: 40%; width: 400px; height: 70px; font-size: 30px;">RENT ME</button>
+    <script  src="{% static 'main/js/cars.js' %}" defer></script>
+{% endblock %}
